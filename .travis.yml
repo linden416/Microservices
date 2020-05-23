@@ -26,5 +26,6 @@ install:
  # - docker push linden416/udagram-feed-api
  # - chmod +x ./deployments/deploy.sh
  # - ./deployments/deploy.sh
- # - kubectl apply -f ./deployments/configmap/env-configmap.yaml
   - kubectl get services  
+  - kubectl apply -f ./deployments/configmap/env-configmap.yaml
+ 
