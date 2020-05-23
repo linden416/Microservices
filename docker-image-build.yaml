@@ -1,0 +1,18 @@
+version: "3"
+services:
+  nginx:
+    build:
+      context: ./udagram-nginx-rp
+    image: linden416/udagram-nginx-rp:v1
+  user-api:
+    build:
+      context: ./udagram-user-api
+    image: linden416/udagram-user-api:v1
+  feed-api:
+    build:
+      context: ./udagram-feed-api 
+    image: linden416/udagram-feed-api:v1
+  udagram-app:
+    build:
+      context: ./udagram-app-ui 
+    image: linden416/udagram-app-ui:v1

@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+data:
+  POSTGRES_DATABASE: "udagramseelerdev"
+  DB_DIALECT: "postgres"
+  POSTGRES_HOST: "udagramseelerdev.c3nnsqm0pe8o.us-east-2.rds.amazonaws.com"
+  POSTGRES_PORT: "5432"
+  AWS_REGION: "us-east-2"
+  AWS_PROFILE: "udagram-dev"
+  S3_MEDIA_BUCKET: "udagram-seeler-dev"
+  JWT_SECRET: "mercedes"
+  URL: "http://localhost:8100"
+metadata:
+  name: env-config

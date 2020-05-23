@@ -1,0 +1,27 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    service: udagram-app
+  name: udagram-app
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        service: udagram-app
+    spec:
+      containers:
+      - image: linden416/udagram-app-ui:v1
+        name: udagram-app
+        imagePullPolicy: Always          
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "1024Mi"
+            cpu: "500m"       
+      restartPolicy: Always
