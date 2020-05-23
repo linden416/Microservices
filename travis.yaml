@@ -18,4 +18,4 @@ before_install:
 
 
 install:
-  - echo "$DOCKER_PASSWORD"
+  - echo "hello udacity"
