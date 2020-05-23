@@ -18,4 +18,6 @@ before_install:
 
 
 install:
-  - echo "hello udacity"
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker volume ls
+  - docker images
