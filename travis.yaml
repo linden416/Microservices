@@ -18,12 +18,4 @@ before_install:
 
 
 install:
-  - echo `hello world!`
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker volume ls
- # - docker-compose -f docker-image-build.yaml build --parallel
- # - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
- # - docker push linden416/udagram-nginx-rp
- # - docker push linden416/udagram-udagram-ui
- # - docker push linden416/udagram-user-api
- # - docker push linden416/udagram-feed-api
+  - echo "$DOCKER_PASSWORD"
