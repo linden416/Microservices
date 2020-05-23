@@ -17,19 +17,20 @@ before_install:
 
 
 install:
+#   Try to setup credentials to access Kubernetes cluster
   - mkdir ${HOME}/.kube
   - echo "$KUBE_CONFIG" | base64 --decode > ${HOME}/.kube/config
-  - sudo cp /etc/kubernetes/admin.conf $HOME/
-  - sudo chown $(id -u):$(id -g) $HOME/admin.conf
-  - export KUBECONFIG=$HOME/admin.conf
- # - docker-compose -f docker-image-build.yaml build --parallel
+#   Build Docker Images
+  - docker-compose -f docker-image-build.yaml build --parallel
+#   Log in to Docker Hub
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
- # - docker push linden416/udagram-nginx-rp
- # - docker push linden416/udagram-app-ui
- # - docker push linden416/udagram-user-api
- # - docker push linden416/udagram-feed-api
- # - chmod +x ./deployments/deploy.sh
- # - ./deployments/deploy.sh
-  - kubectl get services  
-  - kubectl apply -f ./deployments/configmap/env-configmap.yaml
+#   Push images to my "linden416" Docker Hub repository
+  - docker push linden416/udagram-nginx-rp
+  - docker push linden416/udagram-app-ui
+  - docker push linden416/udagram-user-api
+  - docker push linden416/udagram-feed-api
+#   Make bash script executable
+  - chmod +x ./deployments/deploy.sh
+#   Run the kubectl apply -f command for ConfigMap, Secrets, Deployments and Services
+  - ./deployments/deploy.sh
  
