@@ -16,8 +16,9 @@ before_install:
   - sudo mv ./kubectl /usr/local/bin/kubectl
 
 
-
 install:
+  - mkdir ${HOME}/.kube
+  - echo "$KUBE_CONFIG" | base64 --decode > ${HOME}/.kube/config
  # - docker-compose -f docker-image-build.yaml build --parallel
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
  # - docker push linden416/udagram-nginx-rp
