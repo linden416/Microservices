@@ -21,6 +21,8 @@ install:
   - docker-compose -f docker-image-build.yaml build --parallel
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push linden416/udagram-nginx-rp
-  - docker push linden416/udagram-udagram-app
+  - docker push linden416/udagram-app-ui
   - docker push linden416/udagram-user-api
   - docker push linden416/udagram-feed-api
+  - chmod +x ./deployments/deploy.sh
+  - ./deployments/deploy.sh
