@@ -232,4 +232,21 @@ $ kubectl port-forward service/udagram-app 8100:8100
 Open a browser and enter "http://localhost:8100"
 
 
+## References
+[bcrypt invalid elf header when running node app](https://stackoverflow.com/questions/15809611/bcrypt-invalid-elf-header-when-running-node-app)
+
+[How can I solve Invalid ELF header?](https://knowledge.udacity.com/questions/89726)
+
+[Connecting Applications with Services](https://kubernetes.io/docs/concepts/services-networking/connect-applications-service/#environment-variables)
+
+[Deploy application using CI/CD automatically](https://knowledge.udacity.com/questions/197520)
+
+[Continuous delivery to Kubernetes with Travis CI](https://www.caveofcode.com/continuous-delivery-to-kubernetes-with-travis-ci/)
+
+[Kubernetes 1.6.1 The connection to the server localhost:8080 was refused](https://github.com/kubernetes/kubernetes/issues/44665)
+
+[Kubernetes Interactive tutorials](https://kubernetes.io/docs/tutorials/kubernetes-basics/)
+
+[Multiple version of software on same namespace](https://groups.google.com/forum/#!topic/kubernetes-users/_zeW8m9ZX9g)
+
 
