@@ -24,6 +24,8 @@ The following directories are defined within the **Microservices** root director
 - **udagram-nginx-rp**  `<-- Reverse Proxy`
 - **udagram-user-api** `<--Backend REST API providing user authentication`
 
+!!! I could not submit my project because of too many files. I have no guidance on what to do. I will remove the guts of the directories that build the images one by one until I can pass through. 
+
 Two important files reside off the root:
 1. **docker-image-build.yaml**  `<-- This file builds the 4 Docker images contributing to Udagram app` 
 2. **.travis.yml**  `<-- This file controls the Travis CI/CD service`
@@ -57,6 +59,27 @@ Refer to the images in the **Screenshots** directory to view a triggered Build a
 - Travis_CI_Build_images.png `<-- Building the new images`
 - Travis_CI_Build_images_pused.png `<-- Pushing new images to Docker Hub Repository`
 - Travis_CI_Success `<-- Successful completion of the build`
+
+The Travis CI Build instructions I assembled for building the images and pushing to Docker Hub are:
+```
+install:
+#   Try to setup credentials to access Kubernetes cluster
+  - mkdir ${HOME}/.kube
+  - echo "$KUBE_CONFIG" | base64 --decode > ${HOME}/.kube/config
+#   Build Docker Images
+  - docker-compose -f docker-image-build.yaml build --parallel
+#   Log in to Docker Hub
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+#   Push images to my "linden416" Docker Hub repository
+  - docker push linden416/udagram-nginx-rp
+  - docker push linden416/udagram-app-ui
+  - docker push linden416/udagram-user-api
+  - docker push linden416/udagram-feed-api
+#   Make bash script executable
+  - chmod +x ./deployments/deploy.sh
+#   Run the kubectl apply -f command for ConfigMap, Secrets, Deployments and Services
+#  - ./deployments/deploy.sh
+```
 
 The **Travis_CI_Rawlog** directory contains the Rawlog file of a build. The file is called: **successful_build_and_push.out**
 
