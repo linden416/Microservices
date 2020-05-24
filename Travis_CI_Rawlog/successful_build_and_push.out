@@ -1,0 +1,742 @@
+travis_fold:start:worker_info
+[0K[33;1mWorker information[0m
+hostname: efc558fd-e048-4ce6-8810-ed08906c935a@1.worker-com-57674569cc-ffrkj.gce-production-1
+version: v6.2.8 https://github.com/travis-ci/worker/tree/6d3048d96b26562be21fa1a8b8144f4c4cecd083
+instance: travis-job-86225c8f-1537-4601-8eb4-2a288e465b88 travis-ci-stevonnie-xenial-1553530512-f909ac5 (via amqp)
+startup: 6.029003169s
+travis_fold:end:worker_info
+[0Ktravis_time:start:052dd780
+[0Ktravis_time:end:052dd780:start=1590270904999418389,finish=1590270905135029552,duration=135611163,event=no_world_writable_dirs
+[0Ktravis_time:start:11b72f88
+[0Ktravis_time:end:11b72f88:start=1590270905137927685,finish=1590270905141260941,duration=3333256,event=setup_filter
+[0Ktravis_time:start:1b27197c
+[0Ktravis_time:end:1b27197c:start=1590270905145901762,finish=1590270905154072716,duration=8170954,event=agent
+[0Ktravis_time:start:050e027c
+[0Ktravis_time:end:050e027c:start=1590270905156835069,finish=1590270905158742220,duration=1907151,event=check_unsupported
+[0Ktravis_time:start:04fc3358
+[0Ktravis_fold:start:system_info
+[0K[33;1mBuild system information[0m
+Build language: shell
+Build dist: xenial
+Build id: 167924297
+Job id: 339298404
+Runtime kernel version: 4.15.0-1028-gcp
+travis-build version: b681de9d
+[34m[1mBuild image provisioning date and time[0m
+Mon Mar 25 16:34:11 UTC 2019
+[34m[1mOperating System Details[0m
+Distributor ID:	Ubuntu
+Description:	Ubuntu 16.04.6 LTS
+Release:	16.04
+Codename:	xenial
+[34m[1mSystemd Version[0m
+systemd 229
+[34m[1mCookbooks Version[0m
+42e42e4 https://github.com/travis-ci/travis-cookbooks/tree/42e42e4
+[34m[1mgit version[0m
+git version 2.21.0
+[34m[1mbash version[0m
+GNU bash, version 4.3.48(1)-release (x86_64-pc-linux-gnu)
+[34m[1mgcc version[0m
+gcc (Ubuntu 5.4.0-6ubuntu1~16.04.11) 5.4.0 20160609
+[34m[1mdocker version[0m
+Client:
+ Version:           18.06.0-ce
+ API version:       1.38
+ Go version:        go1.10.3
+ Git commit:        0ffa825
+ Built:             Wed Jul 18 19:11:02 2018
+ OS/Arch:           linux/amd64
+ Experimental:      false
+
+Server:
+ Engine:
+  Version:          18.06.0-ce
+  API version:      1.38 (minimum version 1.12)
+  Go version:       go1.10.3
+  Git commit:       0ffa825
+  Built:            Wed Jul 18 19:09:05 2018
+  OS/Arch:          linux/amd64
+  Experimental:     false
+[34m[1mclang version[0m
+clang version 7.0.0 (tags/RELEASE_700/final)
+[34m[1mjq version[0m
+jq-1.5
+[34m[1mbats version[0m
+Bats 0.4.0
+[34m[1mshellcheck version[0m
+0.6.0
+[34m[1mshfmt version[0m
+v2.6.3
+[34m[1mccache version[0m
+3.2.4
+[34m[1mcmake version[0m
+cmake version 3.12.4
+[34m[1mheroku version[0m
+heroku/7.22.7 linux-x64 node-v11.10.1
+[34m[1mimagemagick version[0m
+Version: ImageMagick 6.8.9-9 Q16 x86_64 2018-09-28 http://www.imagemagick.org
+[34m[1mmd5deep version[0m
+4.4
+[34m[1mmercurial version[0m
+version 4.8
+[34m[1mmysql version[0m
+mysql  Ver 14.14 Distrib 5.7.25, for Linux (x86_64) using  EditLine wrapper
+[34m[1mopenssl version[0m
+OpenSSL 1.0.2g  1 Mar 2016
+[34m[1mpacker version[0m
+1.3.3
+[34m[1mpostgresql client version[0m
+psql (PostgreSQL) 9.5.14
+[34m[1mragel version[0m
+Ragel State Machine Compiler version 6.8 Feb 2013
+[34m[1msudo version[0m
+1.8.16
+[34m[1mgzip version[0m
+gzip 1.6
+[34m[1mzip version[0m
+Zip 3.0
+[34m[1mvim version[0m
+VIM - Vi IMproved 7.4 (2013 Aug 10, compiled Nov 24 2016 16:44:48)
+[34m[1miptables version[0m
+iptables v1.6.0
+[34m[1mcurl version[0m
+curl 7.47.0 (x86_64-pc-linux-gnu) libcurl/7.47.0 GnuTLS/3.4.10 zlib/1.2.8 libidn/1.32 librtmp/2.3
+[34m[1mwget version[0m
+GNU Wget 1.17.1 built on linux-gnu.
+[34m[1mrsync version[0m
+rsync  version 3.1.1  protocol version 31
+[34m[1mgimme version[0m
+v1.5.3
+[34m[1mnvm version[0m
+0.34.0
+[34m[1mperlbrew version[0m
+/home/travis/perl5/perlbrew/bin/perlbrew  - App::perlbrew/0.86
+[34m[1mphpenv version[0m
+rbenv 1.1.2
+[34m[1mrvm version[0m
+rvm 1.29.7 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+[34m[1mdefault ruby version[0m
+ruby 2.5.3p105 (2018-10-18 revision 65156) [x86_64-linux]
+travis_fold:end:system_info
+[0K
+travis_time:end:04fc3358:start=1590270905161965079,finish=1590270905167188588,duration=5223509,event=show_system_info
+[0Ktravis_time:start:219d04ba
+[0Ktravis_time:end:219d04ba:start=1590270905169913281,finish=1590270905182880791,duration=12967510,event=rm_riak_source
+[0Ktravis_time:start:124aef9a
+[0Ktravis_time:end:124aef9a:start=1590270905186211012,finish=1590270905191800812,duration=5589800,event=fix_rwky_redis
+[0Ktravis_time:start:0858035b
+[0Ktravis_time:end:0858035b:start=1590270905194643126,finish=1590270905890942931,duration=696299805,event=wait_for_network
+[0Ktravis_time:start:07beeb6c
+[0Ktravis_time:end:07beeb6c:start=1590270905895903925,finish=1590270906079791851,duration=183887926,event=update_apt_keys
+[0Ktravis_time:start:0c53e19c
+[0Ktravis_time:end:0c53e19c:start=1590270906085192009,finish=1590270906150138863,duration=64946854,event=fix_hhvm_source
+[0Ktravis_time:start:090472f2
+[0Ktravis_time:end:090472f2:start=1590270906154304932,finish=1590270906158107220,duration=3802288,event=update_mongo_arch
+[0Ktravis_time:start:0833576b
+[0Ktravis_time:end:0833576b:start=1590270906162102249,finish=1590270906209270465,duration=47168216,event=fix_sudo_enabled_trusty
+[0Ktravis_time:start:0059cfac
+[0Ktravis_time:end:0059cfac:start=1590270906214064225,finish=1590270906216993002,duration=2928777,event=update_glibc
+[0Ktravis_time:start:1c5debca
+[0Ktravis_time:end:1c5debca:start=1590270906223029477,finish=1590270906231818610,duration=8789133,event=clean_up_path
+[0Ktravis_time:start:02a20fc1
+[0Ktravis_time:end:02a20fc1:start=1590270906237247716,finish=1590270906246659696,duration=9411980,event=fix_resolv_conf
+[0Ktravis_time:start:14024ff4
+[0Ktravis_time:end:14024ff4:start=1590270906252576224,finish=1590270906262473990,duration=9897766,event=fix_etc_hosts
+[0Ktravis_time:start:0dd92950
+[0Ktravis_time:end:0dd92950:start=1590270906268283523,finish=1590270906279678460,duration=11394937,event=fix_mvn_settings_xml
+[0Ktravis_time:start:1aae8eca
+[0Ktravis_time:end:1aae8eca:start=1590270906284998924,finish=1590270906295130702,duration=10131778,event=no_ipv6_localhost
+[0Ktravis_time:start:0f5eea02
+[0Ktravis_time:end:0f5eea02:start=1590270906299422070,finish=1590270906302043416,duration=2621346,event=fix_etc_mavenrc
+[0Ktravis_time:start:019ae284
+[0Ktravis_time:end:019ae284:start=1590270906305913584,finish=1590270906309494406,duration=3580822,event=fix_wwdr_certificate
+[0Ktravis_time:start:17e15282
+[0Ktravis_time:end:17e15282:start=1590270906313236413,finish=1590270906337123623,duration=23887210,event=put_localhost_first
+[0Ktravis_time:start:38d5f8f2
+[0Ktravis_time:end:38d5f8f2:start=1590270906341103085,finish=1590270906344883003,duration=3779918,event=home_paths
+[0Ktravis_time:start:00a9be74
+[0Ktravis_time:end:00a9be74:start=1590270906350663028,finish=1590270906363705693,duration=13042665,event=disable_initramfs
+[0Ktravis_time:start:312fdac4
+[0Ktravis_time:end:312fdac4:start=1590270906369627749,finish=1590270906691401088,duration=321773339,event=disable_ssh_roaming
+[0Ktravis_time:start:055ad060
+[0Ktravis_time:end:055ad060:start=1590270906695921616,finish=1590270906698493374,duration=2571758,event=debug_tools
+[0Ktravis_time:start:021b2cbc
+[0Ktravis_time:end:021b2cbc:start=1590270906705209058,finish=1590270906709354939,duration=4145881,event=uninstall_oclint
+[0Ktravis_time:start:21ab505e
+[0Ktravis_time:end:21ab505e:start=1590270906717458898,finish=1590270906721376445,duration=3917547,event=rvm_use
+[0Ktravis_time:start:17bb7398
+[0Ktravis_time:end:17bb7398:start=1590270906728204342,finish=1590270906736976915,duration=8772573,event=rm_etc_boto_cfg
+[0Ktravis_time:start:0ca5e7eb
+[0Ktravis_time:end:0ca5e7eb:start=1590270906744570004,finish=1590270906748639079,duration=4069075,event=rm_oraclejdk8_symlink
+[0Ktravis_time:start:0a80d368
+[0Ktravis_time:end:0a80d368:start=1590270906755158540,finish=1590270906859595497,duration=104436957,event=enable_i386
+[0Ktravis_time:start:0325beee
+[0Ktravis_time:end:0325beee:start=1590270906864026867,finish=1590270906868189679,duration=4162812,event=update_rubygems
+[0Ktravis_time:start:1520a0fc
+[0Ktravis_time:end:1520a0fc:start=1590270906872184780,finish=1590270906885497218,duration=13312438,event=ensure_path_components
+[0Ktravis_time:start:055264fb
+[0Ktravis_time:end:055264fb:start=1590270906890391762,finish=1590270906893595236,duration=3203474,event=redefine_curl
+[0Ktravis_time:start:00961af7
+[0Ktravis_time:end:00961af7:start=1590270906901103877,finish=1590270906967640872,duration=66536995,event=nonblock_pipe
+[0Ktravis_time:start:017a3351
+[0Ktravis_time:end:017a3351:start=1590270906974202010,finish=1590270913009595502,duration=6035393492,event=apt_get_update
+[0Ktravis_time:start:0dac3cb5
+[0Ktravis_time:end:0dac3cb5:start=1590270913014506732,finish=1590270913017128962,duration=2622230,event=deprecate_xcode_64
+[0Ktravis_time:start:001402ec
+[0Ktravis_time:end:001402ec:start=1590270913021662580,finish=1590270915661673651,duration=2640011071,event=update_heroku
+[0Ktravis_time:start:0d29e5a9
+[0Ktravis_time:end:0d29e5a9:start=1590270915668234486,finish=1590270915671806902,duration=3572416,event=shell_session_update
+[0Ktravis_time:start:204aa917
+[0Ktravis_fold:start:docker_mtu
+[0Ktravis_fold:end:docker_mtu
+[0Ktravis_time:end:204aa917:start=1590270915678839190,finish=1590270917945588044,duration=2266748854,event=set_docker_mtu
+[0Ktravis_time:start:1e2902f1
+[0Ktravis_fold:start:resolvconf
+[0Ktravis_fold:end:resolvconf
+[0Ktravis_time:end:1e2902f1:start=1590270917955911862,finish=1590270918030482625,duration=74570763,event=resolvconf
+[0Ktravis_time:start:31a55eb2
+[0Ktravis_time:end:31a55eb2:start=1590270918035090218,finish=1590270918183158381,duration=148068163,event=maven_central_mirror
+[0Ktravis_time:start:29db20e2
+[0Ktravis_time:end:29db20e2:start=1590270918190982181,finish=1590270918295663250,duration=104681069,event=maven_https
+[0Ktravis_time:start:00a6ed32
+[0Ktravis_fold:start:services
+[0Ktravis_time:start:01db7806
+[0K$ sudo systemctl start docker
+travis_time:end:01db7806:start=1590270918308976998,finish=1590270918323583976,duration=14606978,event=prepare
+[0Ktravis_fold:end:services
+[0Ktravis_time:end:01db7806:start=1590270918308976998,finish=1590270921328073997,duration=3019096999,event=services
+[0Ktravis_time:start:025bbe40
+[0Ktravis_time:end:025bbe40:start=1590270921332318879,finish=1590270921334974942,duration=2656063,event=fix_ps4
+[0Ktravis_time:start:02d6b940
+[0K
+travis_fold:start:git.checkout
+[0Ktravis_time:start:03124f28
+[0K$ git clone --depth=50 --branch=master https://github.com/[secure]/Microservices.git [secure]/Microservices
+Cloning into '[secure]/Microservices'...
+Checking out files:  72% (14376/19921)   
+Checking out files:  73% (14543/19921)   
+Checking out files:  74% (14742/19921)   
+Checking out files:  75% (14941/19921)   
+Checking out files:  76% (15140/19921)   
+Checking out files:  77% (15340/19921)   
+Checking out files:  78% (15539/19921)   
+Checking out files:  79% (15738/19921)   
+Checking out files:  80% (15937/19921)   
+Checking out files:  81% (16137/19921)   
+Checking out files:  82% (16336/19921)   
+Checking out files:  83% (16535/19921)   
+Checking out files:  84% (16734/19921)   
+Checking out files:  85% (16933/19921)   
+Checking out files:  86% (17133/19921)   
+Checking out files:  87% (17332/19921)   
+Checking out files:  88% (17531/19921)   
+Checking out files:  89% (17730/19921)   
+Checking out files:  90% (17929/19921)   
+Checking out files:  91% (18129/19921)   
+Checking out files:  92% (18328/19921)   
+Checking out files:  93% (18527/19921)   
+Checking out files:  94% (18726/19921)   
+Checking out files:  95% (18925/19921)   
+Checking out files:  96% (19125/19921)   
+Checking out files:  97% (19324/19921)   
+Checking out files:  98% (19523/19921)   
+Checking out files:  99% (19722/19921)   
+Checking out files: 100% (19921/19921)   
+Checking out files: 100% (19921/19921), done.
+travis_time:end:03124f28:start=1590270921342753900,finish=1590270924866860097,duration=3524106197,event=checkout
+[0K$ cd [secure]/Microservices
+$ git checkout -qf fb3e581c0e00ddcdf127e44cc712bc6320c77460
+travis_fold:end:git.checkout
+[0K
+travis_time:end:03124f28:start=1590270921342753900,finish=1590270926166224941,duration=4823471041,event=checkout
+[0Ktravis_time:start:026e5bd5
+[0K
+[33;1mSetting environment variables from repository settings[0m
+$ export DOCKER_PASSWORD=[secure]
+$ export DOCKER_USERNAME=[secure]
+$ export KUBE_CONFIG=[secure]
+
+[33;1mSetting environment variables from .travis.yml[0m
+$ export DOCKER_COMPOSE_VERSION=1.23.2
+
+travis_time:end:026e5bd5:start=1590270926171545841,finish=1590270926186481778,duration=14935937,event=env
+[0K$ bash -c 'echo $BASH_VERSION'
+4.3.48(1)-release
+
+travis_fold:start:before_install.1
+[0Ktravis_time:start:0fe5ce3c
+[0K$ docker -v && docker-compose -v
+Docker version 18.06.0-ce, build 0ffa825
+docker-compose version 1.23.1, build b02f1306
+travis_time:end:0fe5ce3c:start=1590270926197172767,finish=1590270926910662143,duration=713489376,event=before_install
+[0Ktravis_fold:end:before_install.1
+[0Ktravis_fold:start:before_install.2
+[0Ktravis_time:start:01f11ee4
+[0K$ sudo rm /usr/local/bin/docker-compose
+travis_time:end:01f11ee4:start=1590270926918460313,finish=1590270926929021840,duration=10561527,event=before_install
+[0Ktravis_fold:end:before_install.2
+[0Ktravis_fold:start:before_install.3
+[0Ktravis_time:start:077f2658
+[0K$ curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
+travis_time:end:077f2658:start=1590270926934637440,finish=1590270927830020130,duration=895382690,event=before_install
+[0Ktravis_fold:end:before_install.3
+[0Ktravis_fold:start:before_install.4
+[0Ktravis_time:start:0286903e
+[0K$ chmod +x docker-compose
+travis_time:end:0286903e:start=1590270927838934138,finish=1590270927843396143,duration=4462005,event=before_install
+[0Ktravis_fold:end:before_install.4
+[0Ktravis_fold:start:before_install.5
+[0Ktravis_time:start:03b14420
+[0K$ sudo mv docker-compose /usr/local/bin
+travis_time:end:03b14420:start=1590270927848408069,finish=1590270927856669670,duration=8261601,event=before_install
+[0Ktravis_fold:end:before_install.5
+[0Ktravis_fold:start:before_install.6
+[0Ktravis_time:start:20789f09
+[0K$ curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+travis_time:end:20789f09:start=1590270927861423917,finish=1590270928277372459,duration=415948542,event=before_install
+[0Ktravis_fold:end:before_install.6
+[0Ktravis_fold:start:before_install.7
+[0Ktravis_time:start:0f2bbfaf
+[0K$ chmod +x ./kubectl
+travis_time:end:0f2bbfaf:start=1590270928284326423,finish=1590270928288956305,duration=4629882,event=before_install
+[0Ktravis_fold:end:before_install.7
+[0Ktravis_fold:start:before_install.8
+[0Ktravis_time:start:25ba4360
+[0K$ sudo mv ./kubectl /usr/local/bin/kubectl
+travis_time:end:25ba4360:start=1590270928295119628,finish=1590270928304962706,duration=9843078,event=before_install
+[0Ktravis_fold:end:before_install.8
+[0Ktravis_fold:start:install.1
+[0Ktravis_time:start:04d9a380
+[0K$ mkdir ${HOME}/.kube
+travis_time:end:04d9a380:start=1590270928310340485,finish=1590270928314503507,duration=4163022,event=install
+[0Ktravis_fold:end:install.1
+[0Ktravis_fold:start:install.2
+[0Ktravis_time:start:110acba0
+[0K$ echo "$KUBE_CONFIG" | base64 --decode > ${HOME}/.kube/config
+travis_time:end:110acba0:start=1590270928319880300,finish=1590270928326170068,duration=6289768,event=install
+[0Ktravis_fold:end:install.2
+[0Ktravis_fold:start:install.3
+[0Ktravis_time:start:02cc1048
+[0K$ docker-compose -f docker-image-build.yaml build --parallel
+Building nginx       ... 
+
+Building user-api    ... 
+
+Building feed-api    ... 
+
+Building udagram-app ... 
+
+Building nginx
+Building udagram-app
+Building feed-api
+Building user-api
+Step 1/2 : FROM nginx:alpine
+Step 1/7 : FROM node:12
+Step 1/7 : FROM node:12
+Step 1/8 : FROM beevelop/ionic AS ionic
+12: Pulling from library/node
+12: Pulling from library/node
+alpine: Pulling from library/nginx
+latest: Pulling from beevelop/ionic
+Digest: sha256:630d39f3970740583f96ec6b26cc7b0f531c35a5c2068c551f02f5236b1e373f
+Status: Downloaded newer image for nginx:alpine
+ ---> 89ec9da68213
+Step 2/2 : COPY nginx.conf /etc/nginx/nginx.conf
+ ---> 4abdf18ac3eb
+Successfully built 4abdf18ac3eb
+Successfully tagged [secure]/udagram-nginx-rp:v1
+[4A[2K
+Building nginx       ... [32mdone[0m
+[4BDigest: sha256:360ac6d2ab708d2d682b70dd4f89e4340d48a5710f8e2acb86993efdbd1c1487
+Digest: sha256:360ac6d2ab708d2d682b70dd4f89e4340d48a5710f8e2acb86993efdbd1c1487
+Status: Downloaded newer image for node:12
+ ---> bdca973cfa07
+Step 2/7 : WORKDIR /usr/src/app
+Status: Downloaded newer image for node:12
+ ---> bdca973cfa07
+Step 2/7 : WORKDIR /usr/src/app
+ ---> Running in 8a0550b51dcd
+ ---> Running in 130902827b5e
+Removing intermediate container 130902827b5e
+ ---> 45a8e421a905
+Step 3/7 : COPY package*.json ./
+Removing intermediate container 8a0550b51dcd
+ ---> e798bf2552cd
+Step 3/7 : COPY package*.json ./
+ ---> 41a547099089
+Step 4/7 : RUN npm ci
+ ---> 049dea4aafc3
+Step 4/7 : RUN npm ci
+ ---> Running in 1965cc2df648
+ ---> Running in 081a8580f013
+
+> bcrypt@3.0.8 install /usr/src/app/node_modules/bcrypt
+> node-pre-gyp install --fallback-to-build
+
+[91mnode-pre-gyp[0m[91m [0m[91mWARN Using needle for node-pre-gyp https download 
+[0m[91mnode-pre-gyp[0m[91m WARN Pre-built binaries not installable for bcrypt@3.0.8 and node@12.16.3 (node-v72 ABI, glibc) (falling back to source compile with node-gyp) 
+[0m[91mnode-pre-gyp [0m[91mWARN Hit error Remote end closed socket abruptly. 
+[0m
+> bcrypt@3.0.8 install /usr/src/app/node_modules/bcrypt
+> node-pre-gyp install --fallback-to-build
+
+[91mnode-pre-gyp WARN Using needle for node-pre-gyp https download 
+[0m[91mnode-pre-gyp WARN Pre-built binaries not installable for bcrypt@3.0.8 and node@12.16.3 (node-v72 ABI, glibc) (falling back to source compile with node-gyp) 
+node-pre-gyp WARN Hit error Remote end closed socket abruptly. 
+[0mmake: Entering directory '/usr/src/app/node_modules/bcrypt/build'
+  CXX(target) Release/obj.target/bcrypt_lib/src/blowfish.o
+make: Entering directory '/usr/src/app/node_modules/bcrypt/build'
+  CXX(target) Release/obj.target/bcrypt_lib/src/blowfish.o
+  CXX(target) Release/obj.target/bcrypt_lib/src/bcrypt.o
+  CXX(target) Release/obj.target/bcrypt_lib/src/bcrypt_node.o
+  CXX(target) Release/obj.target/bcrypt_lib/src/bcrypt.o
+  CXX(target) Release/obj.target/bcrypt_lib/src/bcrypt_node.o
+  SOLINK_MODULE(target) Release/obj.target/bcrypt_lib.node
+  COPY Release/bcrypt_lib.node
+  COPY /usr/src/app/node_modules/bcrypt/lib/binding/bcrypt_lib.node
+  TOUCH Release/obj.target/action_after_build.stamp
+make: Leaving directory '/usr/src/app/node_modules/bcrypt/build'
+  SOLINK_MODULE(target) Release/obj.target/bcrypt_lib.node
+  COPY Release/bcrypt_lib.node
+  COPY /usr/src/app/node_modules/bcrypt/lib/binding/bcrypt_lib.node
+  TOUCH Release/obj.target/action_after_build.stamp
+make: Leaving directory '/usr/src/app/node_modules/bcrypt/build'
+added 377 packages in 25.805s
+added 377 packages in 25.771s
+Digest: sha256:5217f4b2492d0b8044f44da69fac0f9a375d8c3dc5bb5affc6243133aeafbf10
+Status: Downloaded newer image for beevelop/ionic:latest
+ ---> 3f7405e00db7
+Step 2/8 : WORKDIR /usr/src/app
+ ---> Running in 80765013de18
+Removing intermediate container 1965cc2df648
+ ---> b2851ad0f8b3
+Step 5/7 : COPY . .
+Removing intermediate container 081a8580f013
+ ---> c4432ff4dbd2
+Step 5/7 : COPY . .
+Removing intermediate container 80765013de18
+ ---> 2013e2f5239e
+Step 3/8 : COPY package*.json ./
+ ---> 4235ddcaff4d
+Step 6/7 : EXPOSE 8080
+ ---> b4ac1f7587f6
+Step 6/7 : EXPOSE 8080
+ ---> Running in 10dea529e362
+ ---> Running in 4ebfe15aff58
+Removing intermediate container 10dea529e362
+ ---> f4dd54cc42e5
+Step 7/7 : CMD [ "npm", "run", "dev" ]
+Removing intermediate container 4ebfe15aff58
+ ---> dd1ab5092fb6
+Step 7/7 : CMD [ "npm", "run", "dev" ]
+ ---> Running in 203cfd55e525
+ ---> afda81b5e238
+Step 4/8 : RUN npm ci
+ ---> Running in 631add23ac0e
+ ---> Running in e45eb557f164
+Removing intermediate container 203cfd55e525
+ ---> a2eeb6911cb0
+Successfully built a2eeb6911cb0
+Successfully tagged [secure]/udagram-feed-api:v1
+[2A[2K
+Building feed-api    ... [32mdone[0m
+[2BRemoving intermediate container 631add23ac0e
+ ---> 8d222a99366e
+Successfully built 8d222a99366e
+Successfully tagged [secure]/udagram-user-api:v1
+[3A[2K
+Building user-api    ... [32mdone[0m
+[3B
+> fsevents@1.2.7 install /usr/src/app/node_modules/fsevents
+> node install
+
+
+> core-js@2.6.11 postinstall /usr/src/app/node_modules/core-js
+> node -e "try{require('./postinstall')}catch(e){}"
+
+[96mThank you for using core-js ([94m https://github.com/zloirock/core-js [96m) for polyfilling JavaScript standard library![0m
+
+[96mThe project needs your help! Please consider supporting of core-js on Open Collective or Patreon: [0m
+[96m>[94m https://opencollective.com/core-js [0m
+[96m>[94m https://www.patreon.com/zloirock [0m
+
+[96mAlso, the author of core-js ([94m https://github.com/zloirock [96m) is looking for a good job -)[0m
+
+
+> node-sass@4.13.1 install /usr/src/app/node_modules/node-sass
+> node scripts/install.js
+
+Downloading binary from https://github.com/sass/node-sass/releases/download/v4.13.1/linux-x64-72_binding.node
+Download complete
+Binary saved to /usr/src/app/node_modules/node-sass/vendor/linux-x64-72/binding.node
+Caching binary to /root/.npm/node-sass/4.13.1/linux-x64-72_binding.node
+
+> node-sass@4.13.1 postinstall /usr/src/app/node_modules/node-sass
+> node scripts/build.js
+
+Binary found at /usr/src/app/node_modules/node-sass/vendor/linux-x64-72/binding.node
+Testing binary
+Binary is fine
+added 1212 packages in 19.239s
+Removing intermediate container e45eb557f164
+ ---> 58506b341ca0
+Step 5/8 : COPY . .
+ ---> 5144ab411d9e
+Step 6/8 : RUN ionic build
+ ---> Running in dd44bd820e72
+> ng run app:build
+
+Date: 2020-05-23T22:04:59.870Z
+Hash: 53da30448e7083c9b379
+Time: 15022ms
+chunk {0} 0.js, 0.js.map () 15.3 kB  [rendered]
+chunk {1} 1.js, 1.js.map () 2.63 kB  [rendered]
+chunk {2} 2.js, 2.js.map () 2.15 kB  [rendered]
+chunk {3} 3.js, 3.js.map () 2.83 kB  [rendered]
+chunk {4} 4.js, 4.js.map () 41.9 kB  [rendered]
+chunk {5} 5.js, 5.js.map () 13.4 kB  [rendered]
+chunk {6} 6.js, 6.js.map () 1.78 kB  [rendered]
+chunk {7} 7.js, 7.js.map () 210 kB  [rendered]
+chunk {8} 8.js, 8.js.map () 6.28 kB  [rendered]
+chunk {9} 9.js, 9.js.map () 15.2 kB  [rendered]
+chunk {10} 10.js, 10.js.map () 21.9 kB  [rendered]
+chunk {11} 11.js, 11.js.map () 27.7 kB  [rendered]
+chunk {12} 12.js, 12.js.map () 16.3 kB  [rendered]
+chunk {13} 13.js, 13.js.map () 21.9 kB  [rendered]
+chunk {14} 14.js, 14.js.map () 19 kB  [rendered]
+chunk {15} 15.js, 15.js.map () 32.5 kB  [rendered]
+chunk {16} 16.js, 16.js.map () 32.5 kB  [rendered]
+chunk {17} 17.js, 17.js.map () 70 kB  [rendered]
+chunk {18} 18.js, 18.js.map () 68.8 kB  [rendered]
+chunk {19} 19.js, 19.js.map () 5.19 kB  [rendered]
+chunk {20} 20.js, 20.js.map () 5.24 kB  [rendered]
+chunk {21} 21.js, 21.js.map () 11.3 kB  [rendered]
+chunk {22} 22.js, 22.js.map () 11.9 kB  [rendered]
+chunk {23} 23.js, 23.js.map () 4.12 kB  [rendered]
+chunk {24} 24.js, 24.js.map () 4.11 kB  [rendered]
+chunk {25} 25.js, 25.js.map () 24.4 kB  [rendered]
+chunk {26} 26.js, 26.js.map () 24.6 kB  [rendered]
+chunk {27} 27.js, 27.js.map () 13.2 kB  [rendered]
+chunk {28} 28.js, 28.js.map () 12.8 kB  [rendered]
+chunk {29} 29.js, 29.js.map () 9.27 kB  [rendered]
+chunk {30} 30.js, 30.js.map () 9.39 kB  [rendered]
+chunk {31} 31.js, 31.js.map () 5.84 kB  [rendered]
+chunk {32} 32.js, 32.js.map () 5.84 kB  [rendered]
+chunk {33} 33.js, 33.js.map () 16.9 kB  [rendered]
+chunk {34} 34.js, 34.js.map () 72.1 kB  [rendered]
+chunk {35} 35.js, 35.js.map () 71.8 kB  [rendered]
+chunk {36} 36.js, 36.js.map () 21.2 kB  [rendered]
+chunk {37} 37.js, 37.js.map () 20.3 kB  [rendered]
+chunk {38} 38.js, 38.js.map () 4.1 kB  [rendered]
+chunk {39} 39.js, 39.js.map () 15.1 kB  [rendered]
+chunk {40} 40.js, 40.js.map () 15.1 kB  [rendered]
+chunk {41} 41.js, 41.js.map () 15.9 kB  [rendered]
+chunk {42} 42.js, 42.js.map () 15.8 kB  [rendered]
+chunk {43} 43.js, 43.js.map () 31.1 kB  [rendered]
+chunk {44} 44.js, 44.js.map () 30.9 kB  [rendered]
+chunk {45} 45.js, 45.js.map () 42.9 kB  [rendered]
+chunk {46} 46.js, 46.js.map () 46.4 kB  [rendered]
+chunk {47} 47.js, 47.js.map () 14.3 kB  [rendered]
+chunk {48} 48.js, 48.js.map () 13.9 kB  [rendered]
+chunk {49} 49.js, 49.js.map () 40.4 kB  [rendered]
+chunk {50} 50.js, 50.js.map () 40.5 kB  [rendered]
+chunk {51} 51.js, 51.js.map () 16.8 kB  [rendered]
+chunk {52} 52.js, 52.js.map () 16.8 kB  [rendered]
+chunk {53} 53.js, 53.js.map () 45.2 kB  [rendered]
+chunk {54} 54.js, 54.js.map () 22.2 kB  [rendered]
+chunk {55} 55.js, 55.js.map () 21.5 kB  [rendered]
+chunk {56} 56.js, 56.js.map () 12.9 kB  [rendered]
+chunk {57} 57.js, 57.js.map () 12.9 kB  [rendered]
+chunk {58} 58.js, 58.js.map () 15 kB  [rendered]
+chunk {59} 59.js, 59.js.map () 15.3 kB  [rendered]
+chunk {60} 60.js, 60.js.map () 23.6 kB  [rendered]
+chunk {61} 61.js, 61.js.map () 25 kB  [rendered]
+chunk {62} 62.js, 62.js.map () 21.3 kB  [rendered]
+chunk {63} 63.js, 63.js.map () 21.2 kB  [rendered]
+chunk {64} 64.js, 64.js.map () 14.8 kB  [rendered]
+chunk {65} 65.js, 65.js.map () 14.8 kB  [rendered]
+chunk {66} 66.js, 66.js.map () 7.91 kB  [rendered]
+chunk {67} 67.js, 67.js.map () 32.8 kB  [rendered]
+chunk {68} 68.js, 68.js.map () 27.9 kB  [rendered]
+chunk {69} 69.js, 69.js.map () 25.5 kB  [rendered]
+chunk {70} 70.js, 70.js.map () 17.2 kB  [rendered]
+chunk {71} 71.js, 71.js.map () 16.8 kB  [rendered]
+chunk {72} 72.js, 72.js.map () 27.1 kB  [rendered]
+chunk {73} 73.js, 73.js.map () 27 kB  [rendered]
+chunk {74} 74.js, 74.js.map () 47.2 kB  [rendered]
+chunk {75} 75.js, 75.js.map () 47.2 kB  [rendered]
+chunk {76} 76.js, 76.js.map () 10.9 kB  [rendered]
+chunk {77} 77.js, 77.js.map () 7.74 kB  [rendered]
+chunk {78} 78.js, 78.js.map () 7.74 kB  [rendered]
+chunk {79} 79.js, 79.js.map () 16 kB  [rendered]
+chunk {80} 80.js, 80.js.map () 16.2 kB  [rendered]
+chunk {81} 81.js, 81.js.map () 2.06 kB  [rendered]
+chunk {82} 82.js, 82.js.map () 13.9 kB  [rendered]
+chunk {83} 83.js, 83.js.map () 13.9 kB  [rendered]
+chunk {84} 84.js, 84.js.map () 20.8 kB  [rendered]
+chunk {85} 85.js, 85.js.map () 21.4 kB  [rendered]
+chunk {86} 86.js, 86.js.map () 13 kB  [rendered]
+chunk {87} 87.js, 87.js.map () 12.8 kB  [rendered]
+chunk {88} 88.js, 88.js.map () 23.3 kB  [rendered]
+chunk {89} 89.js, 89.js.map () 26.5 kB  [rendered]
+chunk {90} 90.js, 90.js.map () 3.86 kB  [rendered]
+chunk {91} 91.js, 91.js.map () 15.7 kB  [rendered]
+chunk {92} 92.js, 92.js.map () 78.7 kB  [rendered]
+chunk {93} 93.js, 93.js.map () 20.2 kB  [rendered]
+chunk {common} common.js, common.js.map (common) 14.7 kB  [rendered]
+chunk {es2015-polyfills} es2015-polyfills.js, es2015-polyfills.js.map (es2015-polyfills) 285 kB [initial] [rendered]
+chunk {home-home-module} home-home-module.js, home-home-module.js.map (home-home-module) 31.3 kB  [rendered]
+chunk {main} main.js, main.js.map (main) 63.2 kB [initial] [rendered]
+chunk {polyfills} polyfills.js, polyfills.js.map (polyfills) 237 kB [initial] [rendered]
+chunk {runtime} runtime.js, runtime.js.map (runtime) 8.79 kB [entry] [rendered]
+chunk {styles} styles.js, styles.js.map (styles) 104 kB [initial] [rendered]
+chunk {vendor} vendor.js, vendor.js.map (vendor) 4.33 MB [initial] [rendered]
+Removing intermediate container dd44bd820e72
+ ---> 3e5d089fb46a
+Step 7/8 : FROM nginx:alpine
+ ---> 89ec9da68213
+Step 8/8 : COPY --from=ionic /usr/src/app/www /usr/share/nginx/html
+ ---> e2472e1b9eac
+Successfully built e2472e1b9eac
+Successfully tagged [secure]/udagram-app-ui:v1
+[1A[2K
+Building udagram-app ... [32mdone[0m
+[1Btravis_time:end:02cc1048:start=1590270928336111018,finish=1590271501481958332,duration=573145847314,event=install
+[0Ktravis_fold:end:install.3
+[0Ktravis_fold:start:install.4
+[0Ktravis_time:start:213538e8
+[0K$ echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+WARNING! Your password will be stored unencrypted in /home/travis/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+travis_time:end:213538e8:start=1590271501487491353,finish=1590271502066282456,duration=578791103,event=install
+[0Ktravis_fold:end:install.4
+[0Ktravis_fold:start:install.5
+[0Ktravis_time:start:0d6b7a1c
+[0K$ docker push [secure]/udagram-nginx-rp
+The push refers to repository [docker.io/[secure]/udagram-nginx-rp]
+51aaf98d46d6: Preparing
+3810cc0c140f: Preparing
+3e207b409db3: Preparing
+3e207b409db3: Layer already exists
+3810cc0c140f: Layer already exists
+51aaf98d46d6: Pushed
+v1: digest: sha256:dcb7f050a907cf05a4a4865189f38ddc45b048537d27f008b36dbf5abb64a493 size: 946
+travis_time:end:0d6b7a1c:start=1590271502072015453,finish=1590271506101803492,duration=4029788039,event=install
+[0Ktravis_fold:end:install.5
+[0Ktravis_fold:start:install.6
+[0Ktravis_time:start:004b1c2a
+[0K$ docker push [secure]/udagram-app-ui
+The push refers to repository [docker.io/[secure]/udagram-app-ui]
+9f648e1b6372: Preparing
+3810cc0c140f: Preparing
+3e207b409db3: Preparing
+3e207b409db3: Layer already exists
+3810cc0c140f: Layer already exists
+9f648e1b6372: Pushed
+v1: digest: sha256:62983ce4ae8845ede268e894ecd54b57b14589696247b0957817156accacbf07 size: 950
+travis_time:end:004b1c2a:start=1590271506110787929,finish=1590271511648259101,duration=5537471172,event=install
+[0Ktravis_fold:end:install.6
+[0Ktravis_fold:start:install.7
+[0Ktravis_time:start:15c2e0a4
+[0K$ docker push [secure]/udagram-user-api
+The push refers to repository [docker.io/[secure]/udagram-user-api]
+1000ef094b44: Preparing
+91fa4b881af3: Preparing
+6ed3d7f0da39: Preparing
+65e28299caef: Preparing
+094744e6bb0b: Preparing
+1e0bfccf51af: Preparing
+fa7c0b6ec20b: Preparing
+5aea01ea0a0f: Preparing
+05f4935ad90a: Preparing
+c96f2308ab16: Preparing
+38c2f9ead82d: Preparing
+0dabcc98eeef: Preparing
+6885f9305c0a: Preparing
+1e0bfccf51af: Waiting
+fa7c0b6ec20b: Waiting
+5aea01ea0a0f: Waiting
+05f4935ad90a: Waiting
+c96f2308ab16: Waiting
+38c2f9ead82d: Waiting
+0dabcc98eeef: Waiting
+6885f9305c0a: Waiting
+094744e6bb0b: Layer already exists
+1e0bfccf51af: Layer already exists
+fa7c0b6ec20b: Layer already exists
+5aea01ea0a0f: Layer already exists
+05f4935ad90a: Layer already exists
+c96f2308ab16: Layer already exists
+65e28299caef: Pushed
+6ed3d7f0da39: Pushed
+38c2f9ead82d: Layer already exists
+0dabcc98eeef: Layer already exists
+6885f9305c0a: Layer already exists
+1000ef094b44: Pushed
+91fa4b881af3: Pushed
+v1: digest: sha256:b0f50c2b1c8fa3868b992a2e3664f0d1776f07565d85665c7544884156630698 size: 3052
+travis_time:end:15c2e0a4:start=1590271511653527695,finish=1590271556194501744,duration=44540974049,event=install
+[0Ktravis_fold:end:install.7
+[0Ktravis_fold:start:install.8
+[0Ktravis_time:start:157a2a46
+[0K$ docker push [secure]/udagram-feed-api
+The push refers to repository [docker.io/[secure]/udagram-feed-api]
+38c96d08f611: Preparing
+b77ce360277a: Preparing
+90737651b9f1: Preparing
+5a8d19044b9a: Preparing
+094744e6bb0b: Preparing
+1e0bfccf51af: Preparing
+fa7c0b6ec20b: Preparing
+5aea01ea0a0f: Preparing
+05f4935ad90a: Preparing
+c96f2308ab16: Preparing
+38c2f9ead82d: Preparing
+0dabcc98eeef: Preparing
+6885f9305c0a: Preparing
+1e0bfccf51af: Waiting
+fa7c0b6ec20b: Waiting
+5aea01ea0a0f: Waiting
+05f4935ad90a: Waiting
+c96f2308ab16: Waiting
+38c2f9ead82d: Waiting
+0dabcc98eeef: Waiting
+6885f9305c0a: Waiting
+094744e6bb0b: Layer already exists
+1e0bfccf51af: Layer already exists
+fa7c0b6ec20b: Layer already exists
+5aea01ea0a0f: Layer already exists
+05f4935ad90a: Layer already exists
+c96f2308ab16: Layer already exists
+38c2f9ead82d: Layer already exists
+38c96d08f611: Pushed
+5a8d19044b9a: Pushed
+0dabcc98eeef: Layer already exists
+6885f9305c0a: Layer already exists
+90737651b9f1: Pushed
+b77ce360277a: Pushed
+v1: digest: sha256:41876c33d9014e06c96baaf1be3b8e735ba630305826c1a58852f44f56b64801 size: 3052
+travis_time:end:157a2a46:start=1590271556202927236,finish=1590271570189216869,duration=13986289633,event=install
+[0Ktravis_fold:end:install.8
+[0Ktravis_fold:start:install.9
+[0Ktravis_time:start:0e05cbe4
+[0K$ chmod +x ./deployments/deploy.sh
+travis_time:end:0e05cbe4:start=1590271570195437897,finish=1590271570199792035,duration=4354138,event=install
+[0Ktravis_fold:end:install.9
+[0K[32;1mThe command "chmod +x ./deployments/deploy.sh" exited with 0.[0m
+
+
+Done. Your build exited with 0.
+
+================================================================================================================
+FYI: Below was my original error. I then tried implementing some commands suggested from external sources
+but I made it to the above error. Via the Mentor Knowledgebase, I opened a question about it and was given
+permission to stop at the point where images were pushed to Docker Hub repository.
+https://knowledge.udacity.com/questions/197520
+
+First error with connection to Kubernetes cluster. 
+The connection to the server localhost:8080 was refused - did you specify the right host or port?
