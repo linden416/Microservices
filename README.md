@@ -127,7 +127,9 @@ kubectl scale --replicas=1 deployment/user-api deployment/nginx-rp deployment/ud
 ```
 ##### Implement fix for Reverse Proxy to Backend APIs Connection
 `I found fix to the connection issue many had from NGINX to Feed-API`
+
 [Kubernetes Service Env Variables](https://kubernetes.io/docs/concepts/services-networking/connect-applications-service/#environment-variables)
+
 When a Pod runs a Node, it adds to the environment SERVICE variables, but if the replicas from deployment are created before the service which is normal, these SERVICE variables will not be configured, so if you scale down the deployment to 0 replicas then scale back up, the SERVICE variables get created and the connections from APP to API work. NGINX RP needs to have these SERVICE variables to communicate to the backend apis.
 **Example of the SERVICE parameters on the NGINX node:**
 ```
