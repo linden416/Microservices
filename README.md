@@ -76,7 +76,11 @@ The **Kubernetes_console_output** directory contains two files showing the **Kub
 
 * * *
 ### Installation:
-After cloning the Microservices GitHub repository, change to the **deployments** directory and run the supplied bash script `deploy.sh`. The script will run the **Kubectl CLI** commands to setup the environment parameters needed by the backend APIs, the secrets for access to the backend database and the AWS S3 file storage, and deploy containers of the images residing in the Docker Hub Repository. The script will also implement scaling up and down the deployments as well to get the optimum CPU usage for local machine. _It will also fix a connection issue due to the Pods being created prior to the Services that access them. As noted below, the NGINX reverse proxy needed its' deployment pods to be scaled down and back up after the Services are deployed so that the SERVICE connection variables are established on the NGINX pod._
+After cloning the Microservices GitHub repository, change to the **deployments** directory and run the supplied bash script `deploy.sh`. The script will run the **Kubectl CLI** commands to setup the environment parameters needed by the backend APIs, the secrets for access to the backend database and the AWS S3 file storage, and deploy containers of the images residing in the Docker Hub Repository. 
+
+The script will also implement scaling up and down the deployments as well to get the optimum CPU usage for local machine. 
+
+It will also fix a connection issue due to the Pods being created prior to the Services that access them. As noted below, the NGINX reverse proxy needed its' deployment pods to be scaled down and back up after the Services are deployed so that the SERVICE connection variables are established on the NGINX pod.
 
 Below is a breakdown of all the **Kubectl CLI** commands in the script:
 ##### Setup the Environment and Postgre DB password and AWS credentials 
