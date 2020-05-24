@@ -7,9 +7,14 @@ May 24, 2020
 The Monolithic version of the Udagram Application has faults which can affect service availability and limitations to efficiently deploying new solutions. The "New World" of Microservices addresses these issues utilizing **Containerized** code and services that can be scaled up or down to meet demand and provide portability across all platforms. Containers along with **Kubernetes** offers **Container Orchestration** enabling multiple deployment patterns for how the Containers interface and how they are accessed externally.
 #### Description ####
 The Udagram application is very distributed. It accesses the AWS Cloud for both backend Database storage **(Postgres)** and **S3** file services to store images. Although there are several Kubernetes services to employ, my application uses **Docker's Kubernetes** services to build the **cluster** of containers contributing to the support of my Udagram application. Each container in the cluster runs a service, this is a different model from the monolithic version of the app which ran all the services together.  
+
+* * *
+
 #### GitHub Repository ####
 https://github.com/linden416/Microservices.git
-This is the source repository for my Udagram application. The following directories are defined within the **Microservices** root directory:
+
+This is the source repository for my Udagram application. 
+The following directories are defined within the **Microservices** root directory:
 - **deployments** `<-- All the YAML files to deploy containers into Kubernetes cluster`
 - **Kubernetes_console_output** `<-- Supporting console output of working application`
 - **Screenshots** `<-- Supporting screenshots of full functioning application, Docker Hub Repository, Travis CI triggering successful build`
@@ -23,14 +28,21 @@ Two important files reside off the root:
 1. **docker-image-build.yaml**  `<-- This file builds the 4 Docker images contributing to Udagram app` 
 2. **.travis.yml**  `<-- This file controls the Travis CI/CD service`
 
+* * *
+
 #### Docker Hub Repository ####
-This is the central location for Docker containers. Please refer to the image in the **Screenshots** directory identified as: **Docker_Hub_Repository.png**. 
+This is the central location for Docker containers. 
+Please refer to the image in the **Screenshots** directory identified as: **Docker_Hub_Repository.png**. 
+
 It shows my repository called **linden416** and the four images deployed to it: 
 - **linden416/udagram-app-ui** 
 - **linden416/udagram-nginx-rp** 
 - **linden416/udagram-feed-api** 
 - **linden416/udagram-user-api**
+
 Note: The Kubernetes deployments reference these images from Docker Hub to instantiate containers running as **pods** in a **node** they run within.
+
+* * *
 
 #### Travis CI ####
 The Travis CI / CD continuous integration and continuous deployment work flow tool is configured in with my GitHub repository. It has been granted access to this "Microservices" repository and will be triggered to run the commands defined within the **.travis.yml** file to do the following:
@@ -46,6 +58,8 @@ Refer to the images in the **Screenshots** directory to view a triggered Build a
 
 The **Travis_CI_Rawlog** directory contains the Rawlog file of a build. The file is called: **successful_build_and_push.out**
 
+* * *
+
 #### Proof of Working Solution ####
 My application was **Exposed** locally to access the Kubernetes cluster. The application design uses the default ClusterIP pattern. After successful deployment, two terminals were opened and the application was exposed locally using Kubernetes CLI command **port-forward**. The following images located in the **Screenshots** folder show the full working functionality of the application:
 - Udagram_App 1of5.png `<-- Shows the main splash page`
@@ -59,7 +73,8 @@ The screenshot image **Local Ports Forwarded UI and Proxy.png** shows both the 8
 The **Kubernetes_console_output** directory contains two files showing the **Kubectl CLI** output for the active deployment:
 - deployment, svc, pod, secrets, config.out `<-- shows deployments, services, pods, secrets, and configmap`
 - pod.logs `<-- shows the running logs for pods`
-- 
+
+* * *
 ### Installation:
 After cloning the Microservices GitHub repository, change to the **deployments** directory and run the supplied bash script `deploy.sh`. The script will run the **Kubectl CLI** commands to setup the environment parameters needed by the backend APIs, the secrets for access to the backend database and the AWS S3 file storage, and deploy containers of the images residing in the Docker Hub Repository. The script will also implement scaling up and down the deployments as well to get the optimum CPU usage for local machine. _It will also fix a connection issue due to the Pods being created prior to the Services that access them. As noted below, the NGINX reverse proxy needed its' deployment pods to be scaled down and back up after the Services are deployed so that the SERVICE connection variables are established on the NGINX pod._
 
@@ -199,4 +214,14 @@ nginx-rp-f7957d698-wd89x      1/1     Running   0          11s
 udagram-app-58d7dd7d8-h2w82   1/1     Running   0          11s
 user-api-78fc49fd4c-rwrn5     1/1     Running   0          15s
 ```
+* * *
+
+### Expose the NGINX and Frontend App Locally to access the Kubernetes cluster
+```
+$ kubectl port-forward service/nginx-rp 8080:8080
+$ kubectl port-forward service/udagram-app 8100:8100
+```
+Open a browser and enter "http://localhost:8100"
+
+
 
