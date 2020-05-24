@@ -9,11 +9,10 @@ The Monolithic version of the Udagram Application has faults which can affect se
 The Udagram application is very distributed. It accesses the AWS Cloud for both backend Database storage **(Postgres)** and **S3** file services to store images. Although there are several Kubernetes services to employ, my application uses **Docker's Kubernetes** services to build the **cluster** of containers contributing to the support of my Udagram application. Each container in the cluster runs a service, this is a different model from the monolithic version of the app which ran all the services together.  
 #### GitHub Repository ####
 https://github.com/linden416/Microservices.git
-This is the source repository for my Udagram application. The following directories are defined as follows:
-**Microservices**:
+This is the source repository for my Udagram application. The following directories are defined within the **Microservices** root directory:
 - **deployments** `<-- All the YAML files to deploy containers into Kubernetes cluster`
 - **Kubernetes_console_output** `<-- Supporting console output of working application`
-- **Screenshots `<-- Supporting screenshots of full functioning application, Docker Hub Repository, Travis CI Triggering and Building Images and pushing to Docker Hub Repo`
+- **Screenshots** `<-- Supporting screenshots of full functioning application, Docker Hub Repository, Travis CI triggering successful build`
 - **Travis_CI_Rawlog** `<-- Full log of pushed GitHub update that triggered Travis CI to build and deploy new images`
 - **udagram-app-ui**   `<-- Udagram's front end User Interface`
 - **udagram-feed-api**  `<-- Backend REST API providing images`
@@ -21,11 +20,16 @@ This is the source repository for my Udagram application. The following director
 - **udagram-user-api** `<--Backend REST API providing user authentication`
 
 Two important files reside off the root:
-1. **docker-image-build.yaml**  `<-- This file is builds the 4 images contributing to Udagram app` 
+1. **docker-image-build.yaml**  `<-- This file builds the 4 Docker images contributing to Udagram app` 
 2. **.travis.yml**  `<-- This file controls the Travis CI/CD service`
 
 #### Docker Hub Repository ####
-This is the central location for Docker containers. Please refer to the image in the **Screenshots** directory identified as: **Docker_Hub_Repository.png** It shows my repository called **linden416** and the four images deployed to it: **linden416/udagram-app-ui**, **linden416/udagram-nginx-rp**, **linden416/udagram-feed-api**, and **linden416/udagram-user-api**.
+This is the central location for Docker containers. Please refer to the image in the **Screenshots** directory identified as: **Docker_Hub_Repository.png**. 
+It shows my repository called **linden416** and the four images deployed to it: 
+- **linden416/udagram-app-ui** 
+- **linden416/udagram-nginx-rp** 
+- **linden416/udagram-feed-api** 
+- **linden416/udagram-user-api**
 Note: The Kubernetes deployments reference these images from Docker Hub to instantiate containers running as **pods** in a **node** they run within.
 
 #### Travis CI ####
